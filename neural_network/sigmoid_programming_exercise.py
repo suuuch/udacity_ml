@@ -72,6 +72,7 @@ class Sigmoid:
             # TODO: compute derivative of logistic function at input strength
             # Recall: d/dx logistic(x) = logistic(x)*(1-logistic(x))
             dx = self.logistic(self.last_input) * (1 - self.logistic(self.last_input))
+            print("dx:{}".format(dx))
             # TODO: update self.weights based on learning rate, signal accuracy,
             # function slope (derivative) and input value
             delta_w = eta * (y_true - y_pred) * dx * X
